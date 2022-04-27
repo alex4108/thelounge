@@ -14,8 +14,6 @@ const parseWhoxResponse = (user, args) => {
 				return "account";
 			case "realname":
 				return "real_name";
-			case "hopcount":
-				return "num_hops_away";
 			case "op":
 				return "operator";
 			default:
@@ -25,13 +23,13 @@ const parseWhoxResponse = (user, args) => {
 
 	const whoxFields = {
 		c: "channel",
-		u: "account", // username
+		u: "username",
 		h: "hostname",
 		s: "server",
-		n: "nick", // nickname
+		n: "nickname",
 		f: "flags",
 		a: "account",
-		r: "real_name", // realname
+		r: "realname",
 	};
 
 	if (!args) {
