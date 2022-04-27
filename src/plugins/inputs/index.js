@@ -35,6 +35,7 @@ const userInputs = [
 	"rejoin",
 	"topic",
 	"whois",
+	"who",
 	"mute",
 ].reduce(function (plugins, name) {
 	const plugin = require(`./${name}`);
