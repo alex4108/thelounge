@@ -185,7 +185,8 @@ Network.prototype.createIrcFramework = function (client) {
 		enable_chghost: true,
 		enable_echomessage: true,
 		enable_setname: true,
-		auto_reconnect: true,
+		auto_reconnect: true, // Reconnect on other stuff
+		reconnect_attempts: 1, // Reconnect on DNS Failure
 
 		// Exponential backoff maxes out at 300 seconds after 9 reconnects,
 		// it will keep trying for well over an hour (plus the timeouts)
